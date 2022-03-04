@@ -1,0 +1,272 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-family: "Lato", sans-serif;
+  font-family: "Open Sans", sans-serif;
+  font-family: "Roboto Slab", serif;
+  font-family: "Varela Round", sans-serif;
+}
+.pd-y {
+  padding: 120px 0;
+}
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* ltr effect */
+.ltr-effect {
+  position: relative;
+}
+
+.ltr-effect::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #333;
+  transition: width 0.9s;
+  z-index: -1;
+}
+
+.ltr-effect:hover::after {
+  width: 100%;
+}
+
+.hover-opacity:hover {
+  opacity: 50%;
+  transition: opacity 0.5s;
+}
+
+.header {
+  /* background: grey; */
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+}
+
+.header .logo {
+  width: 30%;
+  float: left;
+  opacity: 80%;
+}
+
+.header .nav {
+  width: 70%;
+  float: left;
+  list-style: none;
+  text-align: right;
+}
+.header .nav li {
+  display: inline-block;
+}
+
+.header .nav li a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  padding: 30px 15px;
+}
+
+.header .nav li a:after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 3px;
+  background-color: #6195ff;
+  transition: 0.25s;
+}
+
+.header .nav li a:hover::after {
+  width: 100%;
+}
+
+.clear {
+  clear: both;
+}
+
+.dropdown {
+  position: relative;
+}
+.dropdown-menu {
+  position: absolute;
+  /* background-color: #6195ff; */
+  text-align: center;
+  width: 150px;
+  left: -70%;
+  top: 70%;
+  opacity: 0;
+  visibility: hidden;
+}
+.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+}
+
+.dropdown-menu li {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.8rem;
+}
+
+/* home section */
+.home {
+  height: 100vh;
+  background-image: url(../images/background/background1.webp);
+  background-size: cover;
+  position: relative;
+}
+
+.home-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 65%;
+}
+
+.home-content .title {
+  color: #fff;
+  font-size: 2 rem;
+  text-transform: uppercase;
+}
+
+.home-desc {
+  margin: 1rem 1rem;
+  line-height: 1.5rem;
+  color: #fff;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.home .btn {
+  width: 150px;
+  padding: 10px 0;
+  border-radius: 5px;
+  border: 0;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.home .btn-start {
+  margin-right: 20px;
+  background-color: #fff;
+}
+.home .btn-learn {
+  background-color: #6195ff;
+  color: #fff;
+}
+
+.section-header {
+  text-align: center;
+  margin: 8rem auto 3rem auto;
+}
+
+.section-header .section-title {
+  font-size: 2rem;
+  text-transform: capitalize;
+  margin-bottom: 1rem;
+}
+
+.section-header .line {
+  display: block;
+  width: 150px;
+  height: 3px;
+  background-color: #6195ff;
+  margin: auto;
+  margin-bottom: 2rem;
+}
+
+.about-content {
+  overflow: hidden;
+}
+
+.about-item {
+  width: 30%;
+  float: left;
+  text-align: center;
+  border: 1px solid #e8e8e8;
+  padding: 20px 15px;
+}
+
+.about-item.mg {
+  margin: 0 5%;
+}
+
+.about-item .icon {
+  color: #6195ff;
+  margin-bottom: 10px;
+  font-size: 2.5rem;
+}
+
+.about-item-title {
+  text-transform: capitalize;
+  margin-bottom: 10px;
+  transition: color 0.9s;
+}
+
+.about-item:hover .about-item-title {
+  color: #fff;
+}
+
+.about-item-desc {
+  line-height: 1.6;
+  margin-bottom: 10px;
+  color: rgb(128, 127, 127);
+}
+
+.about-item-link {
+  color: #6195ff;
+  text-transform: capitalize;
+}
+
+.portofolio {
+  background-color: #f5f5f5;
+}
+
+.portofolio-content {
+  overflow: hidden;
+}
+
+.portofolio-item {
+  float: left;
+  width: 30%;
+  margin-bottom: 40px;
+}
+
+.portofolio-item img {
+  width: 100%;
+}
+
+.portofolio-item.mg {
+  margin: 0 5%;
+}
